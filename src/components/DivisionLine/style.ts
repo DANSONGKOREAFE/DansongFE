@@ -1,11 +1,14 @@
 import styled from '@emotion/styled';
 
 type Props = {
-  color: string;
   borderStyle: string;
+  width: string;
+  color: string;
 };
 
 export const DivisionLine = styled.div<Props>`
-  border: 1px ${({ borderStyle }) => borderStyle} ${({ color }) => color};
-  width: 100%;
+  color: ${({ color }) => color};
+  border: 1px ${({ borderStyle }) => borderStyle} ${({ theme }) => theme.colors.border};
+  width: ${({ width }) => width};
+  margin: 0 auto;
 `;

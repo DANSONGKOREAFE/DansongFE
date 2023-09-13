@@ -4,13 +4,13 @@ import { theme } from '../../../styles/theme';
 export const Section = styled.section``;
 
 export const VideoSection = styled.section`
-  height: calc(60vh - 8rem);
-  margin-top: 8rem;
-  background-image: linear-gradient(to bottom, ${theme.colors.navy1}, ${theme.colors.navy2});
+  height: calc(80vh - 6rem);
+  margin-top: 6rem;
+  background-image: ${({ theme }) => theme.backgroundColor.black};
 
-  /* @media (max-width: ${theme.viewport.tablet}) {
-    height: 60vh;
-  } */
+  @media (max-width: ${theme.viewport.tablet}) {
+    display: none;
+  }
 `;
 
 export const TextSection = styled.section`
@@ -18,18 +18,22 @@ export const TextSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: ${theme.viewport.tablet}) {
+    height: 100vh;
+  }
 `;
 
 export const StudioSection = styled.section`
-  width: 100%;
-  background: url('../../../public/images/studio1.webp') no-repeat;
+  background: url('/images/studio.jpg') no-repeat;
   background-size: cover;
   background-attachment: fixed;
   filter: grayscale(100%);
+  height: 200vh;
+  padding-bottom: 10vh;
 `;
 
 export const LogoSection = styled.section`
-  width: 100%;
-  height: 100vh;
-  background-color: ${({ theme }) => theme.colors.navy1};
+  width: 45rem;
+  padding: 10rem 0 20rem 0;
+  margin: 0 auto;
 `;

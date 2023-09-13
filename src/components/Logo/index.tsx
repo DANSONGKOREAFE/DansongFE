@@ -2,13 +2,16 @@ import * as S from './style';
 
 type LogoProps = {
   logo: string;
-  size?: 'small' | 'medium' | 'large';
+  size?: 'small' | 'sm' | 'medium' | 'ml' | 'large' | 'fullLogo' | 'brandLogo';
+  border?: 'none' | 'circle';
+
+  src: string;
 };
 
-export default function Logo({ logo, size = 'medium' }: LogoProps) {
+export default function Logo({ logo, size = 'medium', border = 'none', src }: LogoProps) {
   return (
-    <S.LogoContainer className={size}>
-      <img src={`../../../public/logos/${logo}`} />
+    <S.LogoContainer className={size + ' ' + border}>
+      <img src={src} alt={`${logo}`} />
     </S.LogoContainer>
   );
 }

@@ -1,17 +1,14 @@
-import video1 from '../../public/videos/video1.mp4';
-import video2 from '../../public/videos/video2.mp4';
-import thumbnail1 from '../../public/images/thumbnail1.jpg';
-import thumbnail2 from '../../public/images/thumbnail2.jpg';
-
+import thumbnail1 from '/images/thumbnail1.jpg';
+import thumbnail2 from '/images/thumbnail2.jpg';
 export const VIDEO: Video[] = [
   {
     id: 0,
-    video: video1,
+    video: `${import.meta.env.VITE_BASE_URL}/videos/video1.mp4`,
     thumbnail: thumbnail1,
   },
   {
     id: 1,
-    video: video2,
+    video: `${import.meta.env.VITE_BASE_URL}/videos/video2.mp4`,
     thumbnail: thumbnail2,
   },
 ];
