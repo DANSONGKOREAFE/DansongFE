@@ -1,7 +1,7 @@
 import { theme } from '../../styles/theme';
 import Textline from '../Textline';
 import * as S from './style';
-
+import { isMobile } from 'react-device-detect';
 export default function Studio() {
   return (
     <>
@@ -9,7 +9,7 @@ export default function Studio() {
         <S.TextContainer>
           <Textline
             fontSize={28}
-            animation="top"
+            animation={isMobile ? 'none' : 'top'}
             isFontBold={true}
             color={theme.textColor.white}
             textAlign="center"
@@ -18,7 +18,7 @@ export default function Studio() {
           </Textline>
           <Textline
             fontSize={8}
-            animation="top"
+            animation={isMobile ? 'none' : 'top'}
             isFontBold={true}
             color={theme.textColor.white}
             textAlign="center"
@@ -30,10 +30,9 @@ export default function Studio() {
           <S.TextBox className="textbox">
             <Textline
               fontSize={4}
-              animation="top"
+              animation={isMobile ? 'none' : 'top'}
               color={theme.textColor.white}
               marginBottom="4rem"
-              className="messageA "
             >
               단송 스튜디오는
               <br />
@@ -41,10 +40,9 @@ export default function Studio() {
             </Textline>
             <Textline
               fontSize={4}
-              animation="top"
+              animation={isMobile ? 'none' : 'top'}
               color={theme.textColor.white}
               marginBottom="4rem"
-              className="messageB"
             >
               사물과 인물, 사진과 영상,
               <br />
@@ -53,12 +51,11 @@ export default function Studio() {
             </Textline>
             <Textline
               fontSize={4}
-              animation="top"
+              animation={isMobile ? 'none' : 'top'}
               marginBottom="4rem"
               color={theme.textColor.white}
-              className="messageC"
             >
-              (주)단송코리아를 포함한 다양한 클라이언트들의 아이디어를 실현시켜드립니다
+              (주)단송코리아를 포함한 다양한 클라이언트들의 아이디어를 실현시켜드립니다.
             </Textline>
           </S.TextBox>
         </S.Overlay>

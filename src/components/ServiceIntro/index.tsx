@@ -3,7 +3,7 @@ import * as S from './style';
 import Textline from '../Textline';
 import DivisionLine from '../DivisionLine';
 import { CenterContainer } from '../../styles/global';
-
+import { isMobile } from 'react-device-detect';
 export default function ServiceIntro() {
   return (
     <S.Wrapper>
@@ -11,7 +11,7 @@ export default function ServiceIntro() {
         <CenterContainer>
           <S.MiddleContainer direction="column">
             <Logo logo="dansong" src="/logos/dansongB.png" />
-            <Textline fontSize={2.4} animation="top" isFontBold={true}>
+            <Textline fontSize={2.4} animation={isMobile ? 'none' : 'top'} isFontBold={true}>
               단송 코리아
             </Textline>
           </S.MiddleContainer>
@@ -24,29 +24,36 @@ export default function ServiceIntro() {
 
         <CenterContainer style={{ justifyContent: 'space-between' }}>
           <CenterContainer direction="column" style={{ gap: '1rem' }}>
-            <Logo logo="dansong" src="/images/DSS.png" size="ml" />
-
-            <S.MiddleContainer direction="column">
-              <Textline fontSize={2.4} animation="top" isFontBold={true}>
-                컨텐츠
-              </Textline>
-              <DivisionLine borderStyle="dashed" />
-              <Textline fontSize={1.8} animation="bottom" isFontBold={true}>
-                DSS STUDIO
-              </Textline>
-            </S.MiddleContainer>
+            <a href="/#contents">
+              <Logo logo="dansong" src="/images/DSS.png" size="ml" />
+            </a>
+            <a href="/#contents">
+              <S.MiddleContainer direction="column">
+                <Textline fontSize={2.4} animation={isMobile ? 'none' : 'top'} isFontBold={true}>
+                  컨텐츠
+                </Textline>
+                <DivisionLine borderStyle="dashed" />
+                <Textline fontSize={1.8} animation={isMobile ? 'none' : 'bottom'} isFontBold={true}>
+                  DSS STUDIO
+                </Textline>
+              </S.MiddleContainer>
+            </a>
           </CenterContainer>
           <CenterContainer direction="column" style={{ gap: '1rem' }}>
-            <Logo logo="dansong" src="/logos/itreaming1.png" size="ml" />
-            <S.MiddleContainer direction="column">
-              <Textline fontSize={2.4} animation="top" isFontBold={true}>
-                커머스
-              </Textline>
-              <DivisionLine borderStyle="dashed" />
-              <Textline fontSize={1.8} animation="bottom" isFontBold={true}>
-                잇트리밍
-              </Textline>
-            </S.MiddleContainer>
+            <a href="/#commerce">
+              <Logo logo="dansong" src="/logos/itreaming1.png" size="ml" />
+            </a>
+            <a href="/#commerce">
+              <S.MiddleContainer direction="column">
+                <Textline fontSize={2.4} animation={isMobile ? 'none' : 'top'} isFontBold={true}>
+                  커머스
+                </Textline>
+                <DivisionLine borderStyle="dashed" />
+                <Textline fontSize={1.8} animation={isMobile ? 'none' : 'bottom'} isFontBold={true}>
+                  잇트리밍
+                </Textline>
+              </S.MiddleContainer>
+            </a>
           </CenterContainer>
         </CenterContainer>
       </S.Container>
