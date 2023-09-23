@@ -1,27 +1,27 @@
-# React + TypeScript + Vite
+# 단송 코리아 소개 사이트 [링크](https://dansongkorea.com)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 이번 프로젝트의 목표
+- 사이트 리뉴얼 ( 새로운 **디자인**과 **내용** )
+- 새로운 도메인 구매 및 변경
+- 배포 방식 변경 ( WIX => aws s3 )
+- 반응형 사이트 구현 (모바일 + 웹)
 
-Currently, two official plugins are available:
+## 작업 기간 
+- 2023.08.08 ~ 2023.09.16
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 작업 툴
+- React, TypeScript
+- Vite
+- emotion
+- aws s3 , Route 53 , Cloudfront
 
-## Expanding the ESLint configuration
+## 사이트 소개
+### 1. 메인 페이지 ( 3가지 섹션 : Dansong Korea, Contents, Commerce )
+<img src="https://github.com/www-r/DansongFE/assets/117294002/8da914ad-96a4-4375-b5ef-7a2e8f3f2c80" width=800>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 2. 컨택트 페이지
+<img src="https://github.com/www-r/DansongFE/assets/117294002/d6710d56-02d2-44be-bc25-824d8bb2bbc0"  width=800>
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 작업 인원
+- 김영은 ( [@www-r](https://github.com/www-r) ) [레포](https://github.com/www-r/DansongFE)
+- 이찬영 ( [@dokimion24](https://github.com/dokimion24) ) [레포](https://github.com/dokimion24/DansongFE)
